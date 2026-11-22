@@ -33,6 +33,12 @@ export interface ITableData {
   rows: string[][];
 }
 
+export type WhiteboardBackground = "plain" | "grid" | "lined";
+
+export interface IWhiteboardData {
+  background: WhiteboardBackground;
+}
+
 export interface IContentBlock {
   type: contentBlockType;
   topic: Types.ObjectId;
@@ -57,12 +63,16 @@ export interface IContentBlock {
   url?: string;
   alt?: string;
   caption?: string;
+  fileId?: string;
 
   // Callout
   variant?: CalloutVariant;
 
   // Optional display color
   color?: NoteColor;
+
+  // Whiteboard
+  whiteboard?: IWhiteboardData;
 
   createdAt?: Date;
   updatedAt?: Date;

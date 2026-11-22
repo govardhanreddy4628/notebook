@@ -466,7 +466,6 @@ export function TopicView({ topic, language }: TopicViewProps) {
   };
 
   // ------------------- DELETE BLOCK --------------------
-
   const deleteBlock = async (block: ContentBlock) => {
     if (saving) return;
 
@@ -751,7 +750,7 @@ export function TopicView({ topic, language }: TopicViewProps) {
                   <span
                     role="tooltip"
                     className="
-    pointer-events-none absolute right-14 top-1/2 z-[99]
+    pointer-events-none absolute right-14 top-1/2 z-99
     hidden -translate-y-1/2 translate-x-1
     whitespace-nowrap rounded-lg
     border border-border
