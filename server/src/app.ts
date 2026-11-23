@@ -18,6 +18,20 @@ app.use(
 
 app.use(express.json({ limit: "2mb" }));
 
+app.get("/", (_req, res) => {
+  res.status(200).json({
+    success: true,
+    message: "Welcome to CodeNest API",
+    health: "/health",
+    endpoints: {
+      languages: "/api/v1/languages",
+      topics: "/api/v1/topics",
+      blocks: "/api/v1/blocks",
+      uploads: "/api/v1/uploads",
+    },
+  });
+});
+
 app.get("/health", (_req, res) => {
   res.status(200).json({ success: true, message: "API is running" });
 });
