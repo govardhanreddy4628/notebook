@@ -1,11 +1,12 @@
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import {
   applyTextColor,
   textColorSegments,
   updateTextColors,
 } from "@/lib/text-colors";
 
-import type { NoteColor, TextColorRange } from "@/types";
+import type { CalloutVariant, ContentBlock, NoteColor, TextColorRange } from "@/types";
+import { Save } from "lucide-react";
 
 
 const NOTE_COLORS: {
@@ -46,7 +47,7 @@ function ColoredText({content,colors}: {
   );
 }
 
-function BlockEditor({
+export function BlockEditor({
   block,
   disabled,
   onCancel,
@@ -303,7 +304,7 @@ function BlockEditor({
             <div
               ref={previewRef}
               aria-hidden="true"
-              className="pointer-events-none absolute inset-0 overflow-hidden whitespace-pre-wrap break-words px-3 py-2 text-foreground"
+              className="pointer-events-none absolute inset-0 overflow-hidden whitespace-pre-wrap wrap-break-words px-3 py-2 text-foreground"
             >
               <ColoredText content={text} colors={colors} />
               {"\n"}

@@ -15,7 +15,7 @@ export default function Layout() {
         {/* <Sidebar onSelect={(topic) => setSelectedTopic(topic)} /> */}
         <main className="flex-1 p-6 overflow-y-auto">
           {/* Pass state or use context later */}
-          <Outlet context={{ selectedLang, selectedTopic }} />
+          <Outlet context={{ selectedLang, selectedTopic, setSelectedLang, setSelectedTopic }} />
         </main>
       </div>
     </div>

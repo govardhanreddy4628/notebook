@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "@/pages/Home";
 import SnippetDetail from "@/pages/SnippetDetail";
 import NotFound from "@/pages/NotFound";
-import Layout from "@/components/layout/Layout";
+//import Layout from "@/components/layout/Layout";
 //import "./App.css"
 //import LangPage from "./routes/lang.$lang";
 import LangPage from "@/pages/langPage";

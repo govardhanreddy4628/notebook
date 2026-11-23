@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import type * as React from "react";
 import { ArrowRight, Brush, Circle, Download, Eraser, Highlighter, Minus, Pen, Redo2, RotateCcw, Square, Type, Undo2, ZoomIn, ZoomOut } from "lucide-react";
-import { getMedia, putMedia, uploadMedia } from "@/lib/media-store";
+import { uploadMedia } from "@/lib/media-store";
+//import { getMedia, putMedia } from "@/lib/media-store";
 import type { ContentBlock } from "@/types";
 import { arrowHeadPoints } from "./drawing";
 
